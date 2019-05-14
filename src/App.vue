@@ -45,7 +45,7 @@ export default {
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
-      body: JSON.stringify({ ACCOUNT_ID, APP_ID })
+      body: JSON.stringify({ accountId: ACCOUNT_ID, appId: APP_ID })
     });
     const token = await response.json();
       hamoni = new Hamoni(token);
