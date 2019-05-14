@@ -17,6 +17,8 @@
 import Vue from "vue";
 import vueKanban from "vue-kanban";
 import Hamoni from "hamoni-sync";
+const ACCOUNT_ID = '58d2c9b9-9732-4391-bd8d-8a7101ebbbb8';
+const APP_ID = 'bab4dfafefb84acab457f3d5be7670e1';
 
 Vue.use(vueKanban);
 
@@ -36,8 +38,6 @@ export default {
     }
   },
   mounted: async function() {
-    const accountId = "58d2c9b9-9732-4391-bd8d-8a7101ebbbb8";
-    const appId = "bab4dfafefb84acab457f3d5be7670e1";
     let hamoni;
 
     const response = await fetch("https://api.sync.hamoni.tech/v1/token", {
@@ -45,7 +45,7 @@ export default {
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
-      body: JSON.stringify({ accountId, appId })
+      body: JSON.stringify({ ACCOUNT_ID, APP_ID })
     });
     const token = await response.json();
       hamoni = new Hamoni(token);

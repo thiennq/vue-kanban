@@ -10,7 +10,6 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "hamoni-sync": "^1.1.1",
-    "node-sass": "^4.12.0",
     "vue": "^2.6.10",
     "vue-kanban": "^1.4.0"
   },
